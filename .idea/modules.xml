@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/fenghua-common/fenghua-common.iml" filepath="$PROJECT_DIR$/fenghua-common/fenghua-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fenghua-manager/fenghua-manager.iml" filepath="$PROJECT_DIR$/fenghua-manager/fenghua-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fenghua-manager/fenghua-manager-dao/fenghua-manager-dao.iml" filepath="$PROJECT_DIR$/fenghua-manager/fenghua-manager-dao/fenghua-manager-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fenghua-manager/fenghua-manager-interface/fenghua-manager-interface.iml" filepath="$PROJECT_DIR$/fenghua-manager/fenghua-manager-interface/fenghua-manager-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fenghua-manager/fenghua-manager-pojo/fenghua-manager-pojo.iml" filepath="$PROJECT_DIR$/fenghua-manager/fenghua-manager-pojo/fenghua-manager-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fenghua-manager/fenghua-manager-service/fenghua-manager-service.iml" filepath="$PROJECT_DIR$/fenghua-manager/fenghua-manager-service/fenghua-manager-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fenghua-manager-web/fenghua-manager-web.iml" filepath="$PROJECT_DIR$/fenghua-manager-web/fenghua-manager-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fenghua-parent/fenghua-parent.iml" filepath="$PROJECT_DIR$/fenghua-parent/fenghua-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/generatorSqlmapCustom/generatorSqlmapCustom.iml" filepath="$PROJECT_DIR$/generatorSqlmapCustom/generatorSqlmapCustom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pagehelper/pagehelper.iml" filepath="$PROJECT_DIR$/pagehelper/pagehelper.iml" />
+    </modules>
+  </component>
+</project>

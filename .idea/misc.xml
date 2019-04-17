@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/fenghua-common" />
+    <file type="web" url="file://$PROJECT_DIR$/fenghua-manager-web" />
+    <file type="web" url="file://$PROJECT_DIR$/fenghua-manager/fenghua-manager-service" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/fenghua-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/fenghua-common/pom.xml" />
+        <option value="$PROJECT_DIR$/fenghua-manager/pom.xml" />
+        <option value="$PROJECT_DIR$/fenghua-manager-web/pom.xml" />
+        <option value="$PROJECT_DIR$/pagehelper/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

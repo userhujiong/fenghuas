@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="fenghua-common" />
+        <module name="fenghua-manager-dao" />
+        <module name="fenghua-manager-interface" />
+        <module name="fenghua-manager-pojo" />
+        <module name="fenghua-manager-service" />
+        <module name="fenghua-manager-web" />
+        <module name="pagehelper" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="fenghua-common" target="1.7" />
+      <module name="fenghua-manager" target="1.7" />
+      <module name="fenghua-manager-dao" target="1.7" />
+      <module name="fenghua-manager-interface" target="1.7" />
+      <module name="fenghua-manager-pojo" target="1.7" />
+      <module name="fenghua-manager-service" target="1.7" />
+      <module name="fenghua-manager-web" target="1.7" />
+      <module name="fenghua-parent" target="1.7" />
+      <module name="pagehelper" target="1.6" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

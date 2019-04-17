@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="fenghua-manager-web:war">
+    <output-path>$PROJECT_DIR$/fenghua-manager-web/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>fenghua-manager-web</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="fenghua-manager-web.war">
+      <element id="artifact" artifact-name="fenghua-manager-web:war exploded" />
+    </root>
+  </artifact>
+</component>
