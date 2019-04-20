@@ -20,12 +20,14 @@
 	</bean>
 
 	<!--静态资源映射器:这些资源不交给springMVC处理,直接交给Tomcat处理-->
+	<!--<mvc:default-servlet-handler/>--><!--或者使用该注解-->
 	<mvc:resources mapping="/js/**" location="/WEB-INF/js/"/>
 	<mvc:resources mapping="/css/**" location="/WEB-INF/css/"/>
 
 	<!-- 引用dubbo服务 -->
 	<dubbo:application name="taotao-manager-web"/>
 	<dubbo:registry protocol="zookeeper" address="192.168.25.25:2181"/>
-	<dubbo:reference interface="com.fenghua.service.TestService" id="testService" />
+	<dubbo:reference interface="com.fenghua.service.TestService" id="testService"/>
+	<dubbo:reference interface="com.fenghua.service.ItemService" id="itemService" />
 
 </beans>

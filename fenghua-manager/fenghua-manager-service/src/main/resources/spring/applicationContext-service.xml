@@ -19,5 +19,5 @@
 	<dubbo:protocol name="dubbo" port="20880" />
 	<!-- 声明需要暴露的服务接口 -->
 	<dubbo:service interface="com.fenghua.service.TestService" ref="testServiceImpl" />
-
+	<dubbo:service interface="com.fenghua.service.ItemService" ref="itemServiceImpl" />
 </beans>
