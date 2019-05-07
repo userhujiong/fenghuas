@@ -32,9 +32,9 @@ public class PictureController {
             System.out.println(extName);
             //上传到图片服务器
             FastDFSClient fastDFSClient = new FastDFSClient("classpath:resources/client.conf");
-            String url = fastDFSClient.uploadFile(uploadFile.getBytes(), extName);//group1/M00/00/00/wKgZhVzR11mALKbgAA9Pxso1WKY658.jpg
+            String url = fastDFSClient.uploadFile(uploadFile.getBytes(), extName);//上传图片服务器成功后的获得的图片地址:group1/M00/00/00/wKgZhVzR11mALKbgAA9Pxso1WKY658.jpg
             System.out.println(url);
-            url = IMAGE_SERVER_URL + url;//http://192.168.25.133/group1/M00/00/00/wKgZhVzR11mALKbgAA9Pxso1WKY658.jpg
+            url = IMAGE_SERVER_URL + url;//图片的访问地址(ip访问):http://192.168.25.133/group1/M00/00/00/wKgZhVzR11mALKbgAA9Pxso1WKY658.jpg
             System.out.println(url);
             //响应上传图片的url
             Map result = new HashMap<>();
