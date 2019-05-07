@@ -1,6 +1,7 @@
 package com.fenghua.service.impl;
 
 import com.fenghua.common.pojo.EasyUIDataGridResult;
+import com.fenghua.common.pojo.EasyUITreeNode;
 import com.fenghua.mapper.TbItemMapper;
 import com.fenghua.pojo.TbItem;
 import com.fenghua.pojo.TbItemExample;
@@ -18,6 +19,12 @@ public class ItemServiceImpl implements ItemService {
     @Autowired
     private TbItemMapper mapper;
 
+    /**
+     * 该方法为从数据库中查出所有item数据,并设置当前页和每页数据总数,进行分页
+     * @param page      当前页数
+     * @param rows      每页数据总数
+     * @return          包含所有数据的总记录数和进行分页之后的一页数据的集合
+     */
     public EasyUIDataGridResult getItemList(Integer page, Integer rows) {
         //1:设置分页的信息,使用PageHelper
         if(page==null)page=1;

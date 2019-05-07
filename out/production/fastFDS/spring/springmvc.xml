@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo" 
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
+        http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+
+	<!--扫描所有带@Controller注解的类-->
+	<context:component-scan base-package="com.fenghua.controller" />
+
+	<!--mvc注解驱动,自动加载,处理器适配器,处理器解析器,视图解析器-->
+	<mvc:annotation-driven/>
+
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<!--静态资源映射器:这些资源不交给springMVC处理,直接交给Tomcat处理-->
+	<!--<mvc:default-servlet-handler/>--><!--或者使用该注解-->
+	<mvc:resources mapping="/js/**" location="/WEB-INF/js/"/>
+	<mvc:resources mapping="/css/**" location="/WEB-INF/css/"/>
+
+	<!-- 引用dubbo服务 -->
+	<dubbo:application name="taotao-manager-web"/>
+	<dubbo:registry protocol="zookeeper" address="192.168.25.25:2181"/>
+	<!--商品列表服务-->
+	<dubbo:reference interface="com.fenghua.service.ItemService" id="itemService" />
+	<!--商品类别服务-->
+	<dubbo:reference interface="com.fenghua.service.ItemCatService" id="itemCatService"/>
+	<!--测试服务-->
+	<dubbo:reference interface="com.fenghua.service.TestService" id="testService"/>
+
+</beans>

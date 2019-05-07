@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="fastdfs_client" />
         <module name="fenghua-common" />
         <module name="fenghua-manager-dao" />
         <module name="fenghua-manager-interface" />
@@ -16,6 +17,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="fastdfs_client" target="1.8" />
       <module name="fenghua-common" target="1.7" />
       <module name="fenghua-manager" target="1.7" />
       <module name="fenghua-manager-dao" target="1.7" />

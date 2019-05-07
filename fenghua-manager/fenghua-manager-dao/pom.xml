@@ -28,6 +28,8 @@
             <artifactId>mybatis-spring</artifactId>
         </dependency>
         <!-- mybatis分页相关的 -->
+        <!--应该放在service工程中的pom文件中,但是service依赖于dao,
+           所以在dao中添加分页依赖,service工程中同样可以使用-->
         <dependency>
             <groupId>com.github.miemiedev</groupId>
             <artifactId>mybatis-paginator</artifactId>

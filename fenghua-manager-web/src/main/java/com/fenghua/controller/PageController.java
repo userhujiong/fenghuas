@@ -17,6 +17,10 @@ public class PageController {
 
     //显示商品查询页面
     //请求url: /liem-list
+    /*
+    * {} :表示将请求url对应的位置上的参数保存到page变量中
+    * @PathVariable :从请求url中获取对应名字的参数
+    * */
     @RequestMapping("/{page}")
     public String showPage(@PathVariable String page){
         return page;

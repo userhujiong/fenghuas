@@ -36,12 +36,14 @@
 		<!-- contextConfigLocation不是必须的， 如果不配置contextConfigLocation， springmvc的配置文件默认在：WEB-INF/servlet的name+"-servlet.xml" -->
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
+			<!--初始化spring容器-->
 			<param-value>classpath:spring/springmvc.xml</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>fenghua-manager-web</servlet-name>
+		<!--拦截所有请求,jsp除外-->
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
   

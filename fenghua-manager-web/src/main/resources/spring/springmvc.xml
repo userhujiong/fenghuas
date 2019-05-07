@@ -9,10 +9,15 @@
         http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
 
-	<context:component-scan base-package="com.fenghua.controller" />
-	<context:annotation-config/>
+	<!--加载属性文件-->
+	<context:property-placeholder location="classpath:resources/recources.properties"/>
 
+	<!--扫描所有带@Controller注解的类-->
+	<context:component-scan base-package="com.fenghua.controller" />
+
+	<!--mvc注解驱动,自动加载,处理器适配器,处理器解析器,视图解析器-->
 	<mvc:annotation-driven/>
+
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/" />
@@ -24,10 +29,23 @@
 	<mvc:resources mapping="/js/**" location="/WEB-INF/js/"/>
 	<mvc:resources mapping="/css/**" location="/WEB-INF/css/"/>
 
+	<!-- 配置文件上传解析器 -->
+	<bean id="multipartResolver"
+		  class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- 设定默认编码 -->
+		<property name="defaultEncoding" value="UTF-8"></property>
+		<!-- 设定文件上传的最大值5MB，5*1024*1024 -->
+		<property name="maxUploadSize" value="5242880"></property>
+	</bean>
+
 	<!-- 引用dubbo服务 -->
 	<dubbo:application name="taotao-manager-web"/>
 	<dubbo:registry protocol="zookeeper" address="192.168.25.25:2181"/>
-	<dubbo:reference interface="com.fenghua.service.TestService" id="testService"/>
+	<!--商品列表服务-->
 	<dubbo:reference interface="com.fenghua.service.ItemService" id="itemService" />
+	<!--商品类别服务-->
+	<dubbo:reference interface="com.fenghua.service.ItemCatService" id="itemCatService"/>
+	<!--测试服务-->
+	<dubbo:reference interface="com.fenghua.service.TestService" id="testService"/>
 
 </beans>

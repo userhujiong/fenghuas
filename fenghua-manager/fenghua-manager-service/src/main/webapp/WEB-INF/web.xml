@@ -4,6 +4,7 @@
 
 <web-app>
 
+  <!--初始化spring容器-->
   <context-param>
     <param-name>contextConfigLocation</param-name>
     <param-value>classpath:spring/applicationContext-*.xml</param-value>
