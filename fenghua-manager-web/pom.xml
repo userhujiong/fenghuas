@@ -14,12 +14,17 @@
     <packaging>war</packaging>
 
     <dependencies>
-        <!-- manager-interface接口 -->
         <dependency>
             <groupId>com.fenghua</groupId>
-            <artifactId>fenghua-manager-interface</artifactId>
+            <artifactId>fenghua-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <!-- manager-interface接口 -->
+        <dependency>
+        <groupId>com.fenghua</groupId>
+        <artifactId>fenghua-manager-interface</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </dependency>
         <!-- Spring -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -115,7 +120,6 @@
         <dependency>
             <groupId>commons-fileupload</groupId>
             <artifactId>commons-fileupload</artifactId>
-            <version>${commons-fileupload.version}</version>
         </dependency>
     </dependencies>
     <build>

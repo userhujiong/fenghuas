@@ -13,6 +13,7 @@
         <module name="fenghua-manager-pojo" />
         <module name="fenghua-manager-service" />
         <module name="fenghua-manager-web" />
+        <module name="fenghua-portal-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -25,6 +26,7 @@
       <module name="fenghua-manager-service" target="1.7" />
       <module name="fenghua-manager-web" target="1.7" />
       <module name="fenghua-parent" target="1.7" />
+      <module name="fenghua-portal-web" target="1.7" />
       <module name="pagehelper" target="1.6" />
     </bytecodeTargetLevel>
   </component>
