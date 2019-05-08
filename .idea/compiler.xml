@@ -13,7 +13,6 @@
         <module name="fenghua-manager-pojo" />
         <module name="fenghua-manager-service" />
         <module name="fenghua-manager-web" />
-        <module name="pagehelper" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

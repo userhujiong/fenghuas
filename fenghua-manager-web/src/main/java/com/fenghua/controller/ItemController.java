@@ -1,6 +1,8 @@
 package com.fenghua.controller;
 
 import com.fenghua.common.pojo.EasyUIDataGridResult;
+import com.fenghua.common.pojo.FenghuaResult;
+import com.fenghua.pojo.TbItem;
 import com.fenghua.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -29,5 +31,12 @@ public class ItemController {
         //2:注入服务
         //3:调用服务的方法
         return itemService.getItemList(page,rows);
+    }
+
+    @RequestMapping(value="/save",method=RequestMethod.POST)
+    @ResponseBody
+    public FenghuaResult addItem(TbItem item,String desc){
+        FenghuaResult fenghuaResult = itemService.addItem(item, desc);
+         return fenghuaResult;
     }
 }

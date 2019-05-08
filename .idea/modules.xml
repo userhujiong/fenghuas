@@ -12,7 +12,6 @@
       <module fileurl="file://$PROJECT_DIR$/fenghua-manager-web/fenghua-manager-web.iml" filepath="$PROJECT_DIR$/fenghua-manager-web/fenghua-manager-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/fenghua-parent/fenghua-parent.iml" filepath="$PROJECT_DIR$/fenghua-parent/fenghua-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/generatorSqlmapCustom/generatorSqlmapCustom.iml" filepath="$PROJECT_DIR$/generatorSqlmapCustom/generatorSqlmapCustom.iml" />
-      <module fileurl="file://$PROJECT_DIR$/pagehelper/pagehelper.iml" filepath="$PROJECT_DIR$/pagehelper/pagehelper.iml" />
     </modules>
   </component>
 </project>
