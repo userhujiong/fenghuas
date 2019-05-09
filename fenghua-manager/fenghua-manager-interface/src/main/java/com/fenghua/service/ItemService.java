@@ -24,4 +24,27 @@ public interface ItemService {
      * @return          返回的为添加商品成功的状态和信息和包含数据(200:添加成功)
      */
     FenghuaResult addItem(TbItem item,String desc);
+
+    /**
+     * 批量删除商品
+     * 删除商品的同时要删除对应商品的商品描述信息
+     * @param ids   被删除商品的id集合
+     * @return      返回的为删除商品成功的状态和信息和包含数据(200:添加成功)
+     */
+    FenghuaResult batchDeleteItem(Long[] ids);
+
+    /**
+     * 根据商品的id查询商品的详细描述信息
+     * @param id    商品id
+     * @return      商品消息描述信息
+     */
+    FenghuaResult selectByIdDesc(long id);
+
+    /**
+     * 更新商品方法:商品信息+商品详细描述信息
+     * @param item  商品信息
+     * @param desc  商品详细描述信息
+     * @return      商品是否更新成功的状(200=成功)
+     */
+    FenghuaResult updateItem(TbItem item,String desc);
 }

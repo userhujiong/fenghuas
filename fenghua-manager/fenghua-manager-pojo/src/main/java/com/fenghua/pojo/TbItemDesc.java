@@ -43,4 +43,14 @@ public class TbItemDesc  implements Serializable {
     public void setItemDesc(String itemDesc) {
         this.itemDesc = itemDesc == null ? null : itemDesc.trim();
     }
+
+    @Override
+    public String toString() {
+        return "TbItemDesc{" +
+                "itemId=" + itemId +
+                ", created=" + created +
+                ", updated=" + updated +
+                ", itemDesc='" + itemDesc + '\'' +
+                '}';
+    }
 }

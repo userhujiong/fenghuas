@@ -20,6 +20,7 @@ public class ItemCatController {
     @Autowired
     private ItemCatService itemCatService;
 
+    /*显示所有分类的方法*/
     @RequestMapping("/cat/list")
     @ResponseBody
     public List<EasyUITreeNode> getItemCatList(@RequestParam(name = "id",defaultValue = "0") Long parentId){

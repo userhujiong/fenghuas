@@ -71,4 +71,41 @@ public class ItemServiceImpl implements ItemService {
         return FenghuaResult.ok();
     }
 
+    public FenghuaResult batchDeleteItem(Long[] ids) {
+        for (Long id : ids) {
+            itemMapper.deleteByPrimaryKey(id);//删除商品
+            itemDescMapper.deleteByPrimaryKey(id);//删除商品详细信息
+        }
+        return FenghuaResult.ok();
+    }
+
+
+
+
+    public FenghuaResult selectByIdDesc(long id) {
+        FenghuaResult fenghuaResult = new FenghuaResult();
+        TbItemDesc itemDesc = itemDescMapper.selectByPrimaryKey(id);
+        fenghuaResult.setData(itemDesc);
+        fenghuaResult.setStatus(200);
+        return fenghuaResult;
+    }
+
+    public FenghuaResult updateItem(TbItem item, String desc) {
+        TbItem oldItem = itemMapper.selectByPrimaryKey(item.getId());
+
+        item.setStatus(oldItem.getStatus());
+        item.setCreated(oldItem.getCreated());
+        item.setUpdated(new Date());
+        itemMapper.updateByPrimaryKey(item);
+
+        TbItemDesc itemDesc = new TbItemDesc();
+        itemDesc.setItemId(item.getId());
+        itemDesc.setItemDesc(desc);
+        itemDesc.setCreated(oldItem.getCreated());
+        itemDesc.setUpdated(new Date());
+        itemDescMapper.updateByPrimaryKeySelective(itemDesc);
+        return FenghuaResult.ok();
+    }
+
+
 }
